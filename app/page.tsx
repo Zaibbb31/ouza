@@ -5,28 +5,28 @@ import CircularText from './component/CircularText';
 import CTA from './component/cta';
 
 const galleryImages = [
-  "/photos/DSC04898.JPG",
-  "/photos/DSC00076.JPG",
-  "/photos/DSC09964.JPG",
-  "/photos/DSC00103.JPG",
-  "/photos/DSC04826.JPG",
-  "/photos/DSC00088.JPG",
-  "/photos/DSC09993.JPG",
-  "/photos/DSC04897.JPG",
-  "/photos/DSC00085.JPG",
-  "/photos/DSC00062.JPG",
-  "/photos/DSC04832.JPG",
-  "/photos/DSC09996.JPG",
+  "/carousel/DSC00763.jpg",
+  "/carousel/DSC02105.jpg",
+  "/carousel/DSC02144.jpg",
+  "/carousel/DSC02949.jpg",
+  "/carousel/DSC03082.jpg",
+  "/carousel/DSC03106.jpg",
+  "/carousel/DSC06515.jpg",
+  "/carousel/DSC08562.jpg",
+  "/carousel/DSC09996.jpg",
 ];
 
 const foodImages = [
-  "/photos/DSC09964.JPG",
-  "/photos/DSC09993.JPG",
-  "/photos/DSC00076.JPG",
-  "/photos/DSC00062.JPG",
-  "/photos/DSC09996.JPG",
-  "/photos/DSC00085.JPG",
-  "/photos/DSC00063.JPG",
+  "/food/DSC01590.jpg",
+  "/food/DSC01689.jpg",
+  "/food/DSC01785.jpg",
+  "/food/DSC01914.jpg",
+  "/food/DSC01949.jpg",
+  "/food/DSC02059.jpg",
+  "/food/DSC02092.jpg",
+  "/food/DSC08496.jpg",
+  "/food/DSC08560.jpg",
+  "/food/DSC08630.jpg",
 ];
 
 const drinksImages = [
@@ -48,51 +48,53 @@ const partyImages = [
   "/photos/DSC09964.JPG",
 ];
 
+const cocktailImages = [
+  "/cocktail/0I4A0960.jpg",
+  "/cocktail/0I4A1048.jpg",
+  "/cocktail/DSC00685.jpg",
+  "/cocktail/DSC03044.jpg",
+];
+
 const menuCategories = [
-  { id: 'food' as const, label: 'Food Menu', pdf: '/ouza-food-menu.pdf' },
-  { id: 'drinks' as const, label: 'Drink Menu', pdf: '/ouza-drinks-menu.pdf' },
-  { id: 'party' as const, label: 'Party Menu', pdf: '/ouza-party-menu.pdf' },
+  { id: 'food' as const, label: 'Food Menu', pdf: '/menu%20copy/food%20menu.pdf' },
+  { id: 'bar' as const, label: 'Bar Menu', pdf: '/menu%20copy/OUZA%20-%20bar%20menu.pdf' },
+  { id: 'cocktails' as const, label: 'Cocktail Book', pdf: '/menu%20copy/Ouza%20Cocktail%20Book.pdf' },
 ];
 
 const menuItemsData: Record<string, Array<{ num: string; name: string; price: string; desc: string }>> = {
   food: [
-    { num: '01', name: 'Chimichurri Fish Tikka', price: '₹675', desc: 'Tender river sole marinated in aromatic zesty chimichurri herbs, flame-grilled in the tandoor' },
-    { num: '02', name: 'Truffle Mushroom Croquettes', price: '₹495', desc: 'Crispy golden panko crust with wild forest mushroom duxelles, parmesan & black truffle aioli' },
-    { num: '03', name: 'Labneh with Sundried Tomato Salsa', price: '₹465', desc: 'Velvety house-hung labneh, za\'atar, spiced sundried tomato salsa & warm handmade pita' },
-    { num: '04', name: 'Crisp Butter Garlic Calamari', price: '₹645', desc: 'Tender squid rings tossed in browned garlic butter, bird\'s eye chilli & fresh scallions' },
-    { num: '05', name: 'Chicken Balchão Brioche Pao', price: '₹595', desc: 'Goan-style spiced tangy pulled chicken balchão served with buttery toasted brioche pao' },
-    { num: '06', name: 'Avocado & Burrata Flatbread', price: '₹545', desc: 'Crisp artisan flatbread, crushed hass avocado, creamy burrata, cherry tomatoes & aged balsamic' },
-    { num: '07', name: 'Kung Pao Chicken Rice Bowl', price: '₹625', desc: 'Wok-tossed chicken in fiery sweet-soy glaze, toasted peanuts, bell peppers & fragrant jasmine rice' },
-    { num: '08', name: 'Smoked Butter Chicken & Garlic Naan', price: '₹675', desc: 'Clay-oven roasted chicken simmered in rich velvety tomato makhani gravy, served with crisp garlic naan' },
-    { num: '09', name: 'Ouza Belgian Chocolate Tart', price: '₹450', desc: 'Dark Belgian chocolate ganache, sea salt caramel layer, roasted hazelnut crumble & vanilla bean gelato' },
+    { num: '01', name: 'Chimichurri Fish Tikka', price: '', desc: 'Tender river sole marinated in aromatic zesty chimichurri herbs, flame-grilled in the tandoor' },
+    { num: '02', name: 'Truffle Mushroom Croquettes', price: '', desc: 'Crispy golden panko crust with wild forest mushroom duxelles, parmesan & black truffle aioli' },
+    { num: '03', name: 'Labneh with Sundried Tomato Salsa', price: '', desc: 'Velvety house-hung labneh, za\'atar, spiced sundried tomato salsa & warm handmade pita' },
+    { num: '04', name: 'Crisp Butter Garlic Calamari', price: '', desc: 'Tender squid rings tossed in browned garlic butter, bird\'s eye chilli & fresh scallions' },
+    { num: '05', name: 'Chicken Balchão Brioche Pao', price: '', desc: 'Goan-style spiced tangy pulled chicken balchão served with buttery toasted brioche pao' },
+    { num: '06', name: 'Avocado & Burrata Flatbread', price: '', desc: 'Crisp artisan flatbread, crushed hass avocado, creamy burrata, cherry tomatoes & aged balsamic' },
+    { num: '07', name: 'Kung Pao Chicken Rice Bowl', price: '', desc: 'Wok-tossed chicken in fiery sweet-soy glaze, toasted peanuts, bell peppers & fragrant jasmine rice' },
+    { num: '08', name: 'Smoked Butter Chicken & Garlic Naan', price: '', desc: 'Clay-oven roasted chicken simmered in rich velvety tomato makhani gravy, served with crisp garlic naan' },
+    { num: '09', name: 'Ouza Belgian Chocolate Tart', price: '', desc: 'Dark Belgian chocolate ganache, sea salt caramel layer, roasted hazelnut crumble & vanilla bean gelato' },
   ],
-  drinks: [
-    { num: '01', name: 'Ouza Botanical Spritz', price: '₹750', desc: 'Garden botanicals, elderflower cordial, sparkling prosecco & chilled citrus tonic' },
-    { num: '02', name: 'Clarified Citrus Milk Punch', price: '₹850', desc: 'Spiced rum, grilled pineapple, aromatic bitters & clarified citrus whey' },
-    { num: '03', name: 'Kokum & Smoked Mezcalita', price: '₹850', desc: 'Artisanal mezcal, fresh Konkan kokum nectar, lime & smoked pink salt rim' },
-    { num: '04', name: 'Ouza Smoked Old Fashioned', price: '₹800', desc: 'Bourbon whiskey, barrel-aged bitters, charred orange peel & applewood smoke' },
-    { num: '05', name: 'Passionfruit Basil Smash', price: '₹775', desc: 'London dry gin, fresh yellow passionfruit puree, hand-torn basil & effervescent tonic' },
-    { num: '06', name: 'Roasted Espresso Martini', price: '₹750', desc: 'Freshly pulled single-origin espresso, vodka, coffee liqueur & Madagascar vanilla foam' },
-    { num: '07', name: 'Guava Craft Beer', price: '₹450', desc: 'House craft brew infused with ripe tropical guava, a pinch of chilli salt & crisp wheat finish' },
-    { num: '08', name: 'Blueberry Craft Ale', price: '₹475', desc: 'Refreshing artisanal berry craft ale brewed with mountain blueberries & subtle citrus undertones' },
-    { num: '09', name: 'Curated Reserve Wine', price: '₹1,200', desc: 'Handpicked international and Indian estate vintage pours available by the glass' },
+  bar: [
+    { num: '01', name: 'House Guava Craft Beer', price: '₹450', desc: 'Craft wheat beer infused with ripe tropical guava, a pinch of chilli salt & crisp wheat finish' },
+    { num: '02', name: 'Blueberry Artisanal Ale', price: '₹475', desc: 'Refreshing berry craft ale brewed with mountain blueberries & subtle citrus undertones' },
+    { num: '03', name: 'Belgian Style Witbier', price: '₹450', desc: 'Classic cloudy wheat brew with toasted coriander seeds & dried orange peel' },
+    { num: '04', name: 'Curated International Vintage Wine', price: '₹1,200', desc: 'Handpicked international and Indian estate vintage pours available by the glass' },
+    { num: '05', name: 'Sparkling Italian Prosecco', price: '₹950', desc: 'Crisp, light, effervescent bubbles with green apple and white peach aromas' },
+    { num: '06', name: 'Aged Single Malt & Scotch', price: '₹850', desc: 'Curated library of Highland and Islay single malts, aged bourbons & premium blended scotches' },
+    { num: '07', name: 'Artisanal Botanical Gin', price: '₹750', desc: 'Small-batch craft gins paired with artisanal tonics, dehydrated botanicals & herbs' },
+    { num: '08', name: 'Premium Aged Dark & Spiced Rum', price: '₹650', desc: 'Oak-barrel aged spiced rums, rich molasses notes & smooth lingering finish' },
+    { num: '09', name: 'Ouza Sangria Pitcher / Glass', price: '₹650', desc: 'Red or white wine infused with seasonal orchard fruits, brandy & fresh citrus' },
   ],
-  party: [
-    { num: '01', name: 'Ouza Sunset Soirée Package', price: '₹2,200 / guest', desc: 'Free-flowing artisanal cocktails, chef\'s passed appetizers & dedicated lounge seating' },
-    { num: '02', name: 'The Ouza Grand Feast', price: '₹2,500 / guest', desc: 'Multi-course sharing feast featuring Mediterranean mezze, grills, mains & dessert platters' },
-    { num: '03', name: 'High-Energy Bar & Grazing Table', price: '₹1,950 / guest', desc: 'Signature cocktails, craft beers, artisanal grazing boards & live DJ setup' },
-    { num: '04', name: "Celebration Chef's Table", price: '₹2,800 / guest', desc: 'Bespoke multi-course tasting experience curated by our executive chef for milestones' },
-    { num: '05', name: 'Corporate Sundowner & Private Terrace', price: 'Custom Quote', desc: 'Exclusive terrace bar buyout, personalized beverage bar & tailored gourmet catering' },
-    { num: '06', name: 'Weekend Craft Beer & Grill Brunch', price: '₹1,850 / guest', desc: 'Unlimited craft beers, live tandoor grills, wood-fired bites & acoustic music' },
-    { num: '07', name: 'Intimate Cocktail Gathering', price: '₹1,750 / guest', desc: 'Curated cocktails, gourmet sliders, bao platters & bespoke table styling' },
-    { num: '08', name: 'Late Night Celebration Bites', price: '₹1,600 / guest', desc: 'Midnight cocktail carafes, artisanal flatbreads, sliders & celebratory toasts' },
-    { num: '09', name: 'Milestone Birthday & Anniversary', price: 'Custom Quote', desc: 'Tailored decor, dedicated mixologist, custom celebration cake & private service' },
+  cocktails: [
+    { num: '01', name: 'Ouza Botanical Spritz', price: '', desc: 'Garden botanicals, elderflower cordial, sparkling prosecco & chilled citrus tonic' },
+    { num: '02', name: 'Clarified Citrus Milk Punch', price: '', desc: 'Spiced rum, grilled pineapple, aromatic bitters & silky clarified whey' },
+    { num: '03', name: 'Kokum & Smoked Mezcalita', price: '', desc: 'Artisanal mezcal, fresh Konkan kokum nectar, lime & smoked pink salt rim' },
+    { num: '04', name: 'Ouza Smoked Old Fashioned', price: '', desc: 'Bourbon whiskey, barrel-aged bitters, charred orange peel & applewood smoke' },
   ],
 };
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState<'food' | 'drinks' | 'party'>('food');
+  const [activeTab, setActiveTab] = useState<'food' | 'bar' | 'cocktails'>('food');
   const [imageStep, setImageStep] = useState(0);
 
   useEffect(() => {
@@ -105,7 +107,7 @@ export default function Home() {
   const currentCategory = menuCategories.find((c) => c.id === activeTab) || menuCategories[0];
   const activeItems = menuItemsData[activeTab] || menuItemsData.food;
   const categoryImages =
-    activeTab === 'drinks' ? drinksImages : activeTab === 'party' ? partyImages : foodImages;
+    activeTab === 'bar' ? drinksImages : activeTab === 'cocktails' ? cocktailImages : foodImages;
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -122,12 +124,12 @@ export default function Home() {
         <div
           className="hero-image absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: 'url("/photos/DSC04898.JPG")',
+            backgroundImage: 'url("/DSC06513.jpg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         >
-          <img src="/photos/DSC04898.JPG" alt="Ouza Cocktail Bar & Kitchen" className="w-full h-full object-cover" />
+          <img src="/DSC06513.jpg" alt="Ouza Cocktail Bar & Kitchen" className="w-full h-full object-cover" />
         </div>
 
         {/* Hero Gradient Overlay */}
@@ -242,13 +244,13 @@ export default function Home() {
         <div className="container max-w-8xl 2xl:max-w-8xl w-[94%] mx-auto about-grid grid grid-cols-1 lg:grid-cols-2 gap-[60px] lg:gap-[100px] items-center">
           <div className="about-images relative pr-0 lg:pr-[60px]">
             <img
-              src="/photos/DSC04826.JPG"
+              src="/bigimage.jpg"
               alt="Ouza dining"
               loading="lazy"
               className="about-main w-full lg:w-[90%] h-[420px] lg:h-[530px] object-cover object-center lg:ml-2"
             />
             <img
-              src="/photos/DSC09993.JPG"
+              src="/smallimage.jpg"
               alt="Ouza food"
               loading="lazy"
               className="about-small absolute right-0 bottom-0 w-[135px] lg:w-[190px] h-[155px] lg:h-[210px] object-cover border-[6px] lg:border-[9px] border-[#F8F6EE]"
@@ -339,45 +341,45 @@ export default function Home() {
           <div className="experience-grid !grid grid-cols-1 md:!grid-cols-3 gap-4 lg:gap-5">
             <article className="experience-card relative h-[480px] max-lg:h-[400px] overflow-hidden group">
               <img
-                src="/photos/DSC00103.JPG"
-                alt="Drinks"
+                src="/theouzaexp/bar.jpg"
+                alt="Bar Menu"
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
               <div className="experience-content absolute z-[2] left-[30px] right-[30px] bottom-[30px] max-lg:left-[22px] max-lg:right-[22px] max-lg:bottom-[22px]">
-                <small className="text-[#E29D76] text-[11px] tracking-[2px] block">01 · BAR &amp; BREWS</small>
-                <h3 className="font-serif text-[33px] max-lg:text-[31px] font-normal my-2">Artisanal Drinks</h3>
+                <small className="text-[#E29D76] text-[11px] tracking-[2px] block">01 · BAR MENU</small>
+                <h3 className="font-serif text-[33px] max-lg:text-[31px] font-normal my-2">Bar Menu</h3>
                 <p className="text-white/70 text-[14px] leading-[1.7]">
-                  Signature cocktails, Guava &amp; Blueberry craft beers, and fine spirits curated for every toast.
+                  Artisanal craft beers, fine international wines, aged spirits, and refreshing aperitifs.
                 </p>
                 <a
-                  href="/ouza-drinks-menu.pdf"
+                  href="/menu%20copy/OUZA%20-%20bar%20menu.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block text-[14px] border-b border-white pb-1 mt-4 hover:text-[#E29D76] hover:border-[#E29D76] transition-colors"
                 >
-                  View Drinks Menu (PDF) →
+                  View Bar Menu (PDF) →
                 </a>
               </div>
             </article>
 
             <article className="experience-card relative h-[480px] max-lg:h-[400px] overflow-hidden group">
               <img
-                src="/photos/DSC09964.JPG"
-                alt="Food"
+                src="/theouzaexp/food.jpg"
+                alt="Food Menu"
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
               <div className="experience-content absolute z-[2] left-[30px] right-[30px] bottom-[30px] max-lg:left-[22px] max-lg:right-[22px] max-lg:bottom-[22px]">
-                <small className="text-[#E29D76] text-[11px] tracking-[2px] block">02 · KITCHEN</small>
-                <h3 className="font-serif text-[33px] max-lg:text-[31px] font-normal my-2">Global Comfort Food</h3>
+                <small className="text-[#E29D76] text-[11px] tracking-[2px] block">02 · FOOD MENU</small>
+                <h3 className="font-serif text-[33px] max-lg:text-[31px] font-normal my-2">Food Menu</h3>
                 <p className="text-white/70 text-[14px] leading-[1.7]">
                   Mediterranean mezze, tandoor grills, fresh seafood, and Modern Indian classics made to share.
                 </p>
                 <a
-                  href="/ouza-food-menu.pdf"
+                  href="/menu%20copy/food%20menu.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block text-[14px] border-b border-white pb-1 mt-4 hover:text-[#E29D76] hover:border-[#E29D76] transition-colors"
@@ -389,25 +391,25 @@ export default function Home() {
 
             <article className="experience-card relative h-[480px] max-lg:h-[400px] overflow-hidden group">
               <img
-                src="/photos/DSC04898.JPG"
-                alt="Packages"
+                src="/theouzaexp/cocktail.jpg"
+                alt="Cocktail Book"
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
               <div className="experience-content absolute z-[2] left-[30px] right-[30px] bottom-[30px] max-lg:left-[22px] max-lg:right-[22px] max-lg:bottom-[22px]">
-                <small className="text-[#E29D76] text-[11px] tracking-[2px] block">03 · CELEBRATIONS</small>
-                <h3 className="font-serif text-[33px] max-lg:text-[31px] font-normal my-2">Party Packages</h3>
+                <small className="text-[#E29D76] text-[11px] tracking-[2px] block">03 · COCKTAIL BOOK</small>
+                <h3 className="font-serif text-[33px] max-lg:text-[31px] font-normal my-2">Cocktail Book</h3>
                 <p className="text-white/70 text-[14px] leading-[1.7]">
-                  Tailored celebration menus, corporate sundowners, and private lounge experiences in Baner.
+                  Ouza&apos;s signature handcrafted mixology, botanical infusions, and theatrical cocktail creations.
                 </p>
                 <a
-                  href="/ouza-party-menu.pdf"
+                  href="/menu%20copy/Ouza%20Cocktail%20Book.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block text-[14px] border-b border-white pb-1 mt-4 hover:text-[#E29D76] hover:border-[#E29D76] transition-colors"
                 >
-                  View Party Packages (PDF) →
+                  View Cocktail Book (PDF) →
                 </a>
               </div>
             </article>
@@ -479,10 +481,15 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 3x3 Grid with cycling images */}
+          {/* Grid with cards: 3 cards per row on desktop */}
           <div className="food-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {activeItems.map((item, index) => {
-              const currentImg = categoryImages[(index + imageStep) % categoryImages.length];
+              const currentImg =
+                activeTab === 'food'
+                  ? foodImages[index % foodImages.length]
+                  : activeTab === 'cocktails'
+                  ? cocktailImages[index % cocktailImages.length]
+                  : categoryImages[(index + imageStep) % categoryImages.length];
               return (
                 <article
                   key={`${activeTab}-${item.num}-${index}`}
@@ -505,13 +512,17 @@ export default function Home() {
                       <span className="food-name font-serif text-[22px] sm:text-[24px] text-[#1E1815] font-normal leading-tight">
                         {item.name}
                       </span>
-                      <span className="food-price text-[#B36840] font-serif text-[17px] sm:text-[18px] font-medium shrink-0">
-                        {item.price}
-                      </span>
+                      {Boolean(item.price) && (
+                        <span className="food-price text-[#B36840] font-serif text-[17px] sm:text-[18px] font-medium shrink-0">
+                          {item.price}
+                        </span>
+                      )}
                     </div>
-                    <p className="food-description text-[#7A6F66] text-[13.5px] leading-[1.6] mt-2">
-                      {item.desc}
-                    </p>
+                    {Boolean(item.desc) && (
+                      <p className="food-description text-[#7A6F66] text-[13.5px] leading-[1.6] mt-2">
+                        {item.desc}
+                      </p>
+                    )}
                   </div>
                 </article>
               );

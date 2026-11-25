@@ -195,33 +195,33 @@ export default function Navbar({
               >
                 <div className="bg-[#F8F6EE] text-[#1E1815] rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.18)] border border-[#E8DEC8] p-2 flex flex-col gap-1">
                   <a
-                    href="/ouza-food-menu.pdf"
+                    href="/menu%20copy/food%20menu.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setDropdownOpen(false)}
                     className="flex items-center justify-between px-3.5 py-2.5 rounded-lg text-[14px] font-medium hover:bg-[#EFEADA] hover:text-[#B36840] transition-colors group/item"
                   >
-                    <span>Food</span>
+                    <span>Food Menu</span>
                     <span className="text-[11px] text-[#7A6F66] uppercase font-semibold tracking-wider group-hover/item:text-[#B36840]">PDF ↗</span>
                   </a>
                   <a
-                    href="/ouza-drinks-menu.pdf"
+                    href="/menu%20copy/OUZA%20-%20bar%20menu.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setDropdownOpen(false)}
                     className="flex items-center justify-between px-3.5 py-2.5 rounded-lg text-[14px] font-medium hover:bg-[#EFEADA] hover:text-[#B36840] transition-colors group/item"
                   >
-                    <span>Drinks</span>
+                    <span>Bar Menu</span>
                     <span className="text-[11px] text-[#7A6F66] uppercase font-semibold tracking-wider group-hover/item:text-[#B36840]">PDF ↗</span>
                   </a>
                   <a
-                    href="/ouza-party-menu.pdf"
+                    href="/menu%20copy/Ouza%20Cocktail%20Book.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setDropdownOpen(false)}
                     className="flex items-center justify-between px-3.5 py-2.5 rounded-lg text-[14px] font-medium hover:bg-[#EFEADA] hover:text-[#B36840] transition-colors group/item"
                   >
-                    <span>Party Packages</span>
+                    <span>Cocktail Book</span>
                     <span className="text-[11px] text-[#7A6F66] uppercase font-semibold tracking-wider group-hover/item:text-[#B36840]">PDF ↗</span>
                   </a>
                 </div>
@@ -402,7 +402,7 @@ export default function Navbar({
                 {mobileMenuExpanded && (
                   <div className="mt-2 mb-2 flex flex-col gap-2 pl-2">
                     <a
-                      href="/ouza-food-menu.pdf"
+                      href="/menu%20copy/food%20menu.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={handleClose}
@@ -412,23 +412,23 @@ export default function Navbar({
                       <span className="text-[11px] font-semibold tracking-wider text-[#E29D76] uppercase">PDF ↗</span>
                     </a>
                     <a
-                      href="/ouza-drinks-menu.pdf"
+                      href="/menu%20copy/OUZA%20-%20bar%20menu.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={handleClose}
                       className="flex items-center justify-between px-4 py-3 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 text-white font-sans text-[15px] font-medium transition-all group"
                     >
-                      <span className="group-hover:text-[#E29D76] transition-colors">Drinks Menu</span>
+                      <span className="group-hover:text-[#E29D76] transition-colors">Bar Menu</span>
                       <span className="text-[11px] font-semibold tracking-wider text-[#E29D76] uppercase">PDF ↗</span>
                     </a>
                     <a
-                      href="/ouza-party-menu.pdf"
+                      href="/menu%20copy/Ouza%20Cocktail%20Book.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={handleClose}
                       className="flex items-center justify-between px-4 py-3 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 text-white font-sans text-[15px] font-medium transition-all group"
                     >
-                      <span className="group-hover:text-[#E29D76] transition-colors">Party Packages</span>
+                      <span className="group-hover:text-[#E29D76] transition-colors">Cocktail Book</span>
                       <span className="text-[11px] font-semibold tracking-wider text-[#E29D76] uppercase">PDF ↗</span>
                     </a>
                   </div>
