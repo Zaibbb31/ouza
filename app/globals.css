@@ -1,26 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* OUZA Brand Colors */
+  --color-brand-red: #B36840;       /* Burnt Sienna */
+  --color-brand-red-dark: #96522E;  /* Dark Burnt Sienna */
+  --color-brand-red-light: #FBF2ED; /* Soft Terracotta Wash */
+  --color-brand-accent: #E29D76;    /* Warm Terracotta Accent */
+  --color-brand-cream: #F8F6EE;     /* Ivory */
+  --color-brand-cream-dark: #EFEADA;/* Warm Ivory Muted */
+  --color-brand-dark: #1E1815;      /* Deep Espresso / Charcoal */
+  --color-brand-dark-2: #2B231F;
+  --color-brand-text: #29231F;      /* Body Text */
+  --color-brand-muted: #7A6F66;     /* Muted Text */
+  --color-brand-border: #E8DEC8;    /* Ivory Harmonized Border */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* =========================================================
+   BASE RESETS & SAFE MOBILE DEFAULTS
+   Ensure nothing ever crosses the mobile screen width!
+========================================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #F8F6EE;
+  color: #29231F;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/* Container safety utility */
+.container {
+  width: min(1200px, 92%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Scrollbar hiding utility */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================================
+   AUTO-SCROLLING GALLERY MARQUEE (RIGHT TO LEFT)
+========================================================= */
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee-infinite {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 45s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-infinite:hover {
+  animation-play-state: paused;
 }
