@@ -17,16 +17,13 @@ const galleryImages = [
 ];
 
 const foodImages = [
-  "/food/DSC01590.jpg",
-  "/food/DSC01689.jpg",
-  "/food/DSC01785.jpg",
-  "/food/DSC01914.jpg",
-  "/food/DSC01949.jpg",
-  "/food/DSC02059.jpg",
-  "/food/DSC02092.jpg",
-  "/food/DSC08496.jpg",
-  "/food/DSC08560.jpg",
-  "/food/DSC08630.jpg",
+  "/foodmenu/CHIMICHURI%20FISH%20TIKKA.jpg",
+  "/foodmenu/Muhamara%20with%20pita.jpg",
+  "/foodmenu/Chicken%20Bao.jpg",
+  "/foodmenu/CHICKEN%20LOADED%20NACHOS.jpg",
+  "/foodmenu/LAMACHUN.jpg",
+  "/foodmenu/SPAGHETTI%20PRAWNS%20AGLIO%20E%20OLIO.jpg",
+  "/foodmenu/CARAMELIZED%20POPCORN%20BHEL.jpg",
 ];
 
 const drinksImages = [
@@ -61,17 +58,15 @@ const menuCategories = [
   { id: 'cocktails' as const, label: 'Cocktail Book', pdf: '/menu%20copy/Ouza%20Cocktail%20Book.pdf' },
 ];
 
-const menuItemsData: Record<string, Array<{ num: string; name: string; price: string; desc: string }>> = {
+const menuItemsData: Record<string, Array<{ num: string; name: string; price: string; desc: string; image?: string }>> = {
   food: [
-    { num: '01', name: 'Chimichurri Fish Tikka', price: '', desc: 'Tender river sole marinated in aromatic zesty chimichurri herbs, flame-grilled in the tandoor' },
-    { num: '02', name: 'Truffle Mushroom Croquettes', price: '', desc: 'Crispy golden panko crust with wild forest mushroom duxelles, parmesan & black truffle aioli' },
-    { num: '03', name: 'Labneh with Sundried Tomato Salsa', price: '', desc: 'Velvety house-hung labneh, za\'atar, spiced sundried tomato salsa & warm handmade pita' },
-    { num: '04', name: 'Crisp Butter Garlic Calamari', price: '', desc: 'Tender squid rings tossed in browned garlic butter, bird\'s eye chilli & fresh scallions' },
-    { num: '05', name: 'Chicken Balchão Brioche Pao', price: '', desc: 'Goan-style spiced tangy pulled chicken balchão served with buttery toasted brioche pao' },
-    { num: '06', name: 'Avocado & Burrata Flatbread', price: '', desc: 'Crisp artisan flatbread, crushed hass avocado, creamy burrata, cherry tomatoes & aged balsamic' },
-    { num: '07', name: 'Kung Pao Chicken Rice Bowl', price: '', desc: 'Wok-tossed chicken in fiery sweet-soy glaze, toasted peanuts, bell peppers & fragrant jasmine rice' },
-    { num: '08', name: 'Smoked Butter Chicken & Garlic Naan', price: '', desc: 'Clay-oven roasted chicken simmered in rich velvety tomato makhani gravy, served with crisp garlic naan' },
-    { num: '09', name: 'Ouza Belgian Chocolate Tart', price: '', desc: 'Dark Belgian chocolate ganache, sea salt caramel layer, roasted hazelnut crumble & vanilla bean gelato' },
+    { num: '01', name: 'Chimichurri Fish Tikka', price: '', desc: 'Tender river sole marinated in aromatic zesty chimichurri herbs, flame-grilled in the tandoor', image: '/foodmenu/CHIMICHURI%20FISH%20TIKKA.jpg' },
+    { num: '02', name: 'Muhammara with Pita', price: '', desc: 'Rich roasted red pepper & walnut dip infused with pomegranate molasses, served with warm handmade pita', image: '/foodmenu/Muhamara%20with%20pita.jpg' },
+    { num: '03', name: 'Chicken Bao', price: '', desc: 'Fluffy steamed artisan bao buns filled with glazed spiced chicken, scallions & crunchy house slaw', image: '/foodmenu/Chicken%20Bao.jpg' },
+    { num: '04', name: 'Chicken Loaded Nachos', price: '', desc: 'Crisp tortilla chips topped with shredded spiced chicken, molten artisanal cheese, jalapeños & salsa', image: '/foodmenu/CHICKEN%20LOADED%20NACHOS.jpg' },
+    { num: '05', name: 'Lamachun Flatbread', price: '', desc: 'Crispy Turkish-style thin flatbread baked with seasoned minced meat, sumac onions, fresh herbs & lemon', image: '/foodmenu/LAMACHUN.jpg' },
+    { num: '06', name: 'Spaghetti Prawns Aglio E Olio', price: '', desc: 'Classic spaghetti tossed with sautéed tiger prawns, golden garlic slices, extra virgin olive oil & chilli', image: '/foodmenu/SPAGHETTI%20PRAWNS%20AGLIO%20E%20OLIO.jpg' },
+    { num: '07', name: 'Caramelized Popcorn Bhel', price: '', desc: 'Sweet and savory gourmet popcorn tossed with spiced crisps, tangy tamarind drizzle & roasted peanuts', image: '/foodmenu/CARAMELIZED%20POPCORN%20BHEL.jpg' },
   ],
   bar: [
     { num: '01', name: 'House Guava Craft Beer', price: '₹450', desc: 'Craft wheat beer infused with ripe tropical guava, a pinch of chilli salt & crisp wheat finish' },
@@ -333,7 +328,7 @@ export default function Home() {
           <div className="experience-grid !grid grid-cols-1 md:!grid-cols-3 gap-4 lg:gap-5">
             <article className="experience-card relative h-[480px] max-lg:h-[400px] overflow-hidden group">
               <img
-                src="/DSC07873.jpg"
+                src="/DSC06052.JPG"
                 alt="Bar Menu"
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -473,7 +468,7 @@ export default function Home() {
           {/* Grid with cards: 3 cards per row on desktop */}
           <div className="food-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {activeItems.map((item, index) => {
-              const currentImg = categoryImages[index % categoryImages.length];
+              const currentImg = item.image || categoryImages[index % categoryImages.length];
               return (
                 <article
                   key={`${activeTab}-${item.num}-${index}`}
