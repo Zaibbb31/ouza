@@ -13,6 +13,13 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  icons: {
+    icon: [
+      { url: '/logo-white.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/logo-white.svg',
+    apple: '/logo-white.svg',
+  },
   robots: {
     index: true,
     follow: true,
