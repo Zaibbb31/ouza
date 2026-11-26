@@ -5,59 +5,40 @@ import CircularText from './component/CircularText';
 import CTA from './component/cta';
 
 const galleryImages = [
-  "/carousel/DSC00763.jpg",
-  "/carousel/DSC02105.jpg",
-  "/carousel/DSC02144.jpg",
-  "/carousel/DSC02949.jpg",
-  "/carousel/DSC03082.jpg",
-  "/carousel/DSC03106.jpg",
-  "/carousel/DSC06515.jpg",
-  "/carousel/DSC08562.jpg",
-  "/carousel/DSC09996.jpg",
+  "/carousel/DSC00763.webp",
+  "/carousel/DSC02105.webp",
+  "/carousel/DSC02144.webp",
+  "/carousel/DSC02949.webp",
+  "/carousel/DSC03082.webp",
+  "/carousel/DSC03106.webp",
+  "/carousel/DSC06515.webp",
+  "/carousel/DSC08562.webp",
+  "/carousel/DSC09996.webp",
 ];
 
 const foodImages = [
-  "/foodmenu/CHIMICHURI%20FISH%20TIKKA.jpg",
-  "/foodmenu/Muhamara%20with%20pita.jpg",
-  "/foodmenu/Chicken%20Bao.jpg",
-  "/foodmenu/CHICKEN%20LOADED%20NACHOS.jpg",
-  "/foodmenu/LAMACHUN.jpg",
-  "/foodmenu/SPAGHETTI%20PRAWNS%20AGLIO%20E%20OLIO.jpg",
-  "/foodmenu/CARAMELIZED%20POPCORN%20BHEL.jpg",
+  "/foodmenu/CHIMICHURI%20FISH%20TIKKA.webp",
+  "/foodmenu/Muhamara%20with%20pita.webp",
+  "/foodmenu/Chicken%20Bao.webp",
+  "/foodmenu/CHICKEN%20LOADED%20NACHOS.webp",
+  "/foodmenu/LAMACHUN.webp",
+  "/foodmenu/SPAGHETTI%20PRAWNS%20AGLIO%20E%20OLIO.webp",
+  "/foodmenu/CARAMELIZED%20POPCORN%20BHEL.webp",
 ];
 
 const beerImages = [
-  "/beer/CZECH%20DARK%20LAGER.jpg",
-  "/beer/KOKAN%20RICE%20LAGER.jpg",
-  "/beer/WIT%20AND%20WISDOM.jpg",
-  "/beer/GUAVA%20MEAD.jpg",
-  "/beer/DOUBLE%20BERRY%20MEAD.jpg",
-  "/beer/HAPPY%20WITH%20SIN.jpg",
-];
-
-const drinksImages = [
-  "/photos/DSC00103.JPG",
-  "/photos/DSC00088.JPG",
-  "/photos/DSC00116.JPG",
-  "/photos/DSC00089.JPG",
-  "/photos/DSC00076.JPG",
-  "/photos/DSC00062.JPG",
-];
-
-const partyImages = [
-  "/photos/DSC04898.JPG",
-  "/photos/DSC04897.JPG",
-  "/photos/DSC00076.JPG",
-  "/photos/DSC00085.JPG",
-  "/photos/DSC04826.JPG",
-  "/photos/DSC04832.JPG",
-  "/photos/DSC09964.JPG",
+  "/beer/CZECH%20DARK%20LAGER.webp",
+  "/beer/KOKAN%20RICE%20LAGER.webp",
+  "/beer/WIT%20AND%20WISDOM.webp",
+  "/beer/GUAVA%20MEAD.webp",
+  "/beer/DOUBLE%20BERRY%20MEAD.webp",
+  "/beer/HAPPY%20WITH%20SIN.webp",
 ];
 
 const cocktailImages = [
-  "/cocktailimg/BREAKY%20BREAKY.jpg",
-  "/cocktailimg/PURPLE%20TICKLE.jpg",
-  "/cocktailimg/TRUFFLE%20TUSSLE.jpg",
+  "/cocktailimg/BREAKY%20BREAKY.webp",
+  "/cocktailimg/PURPLE%20TICKLE.webp",
+  "/cocktailimg/TRUFFLE%20TUSSLE.webp",
 ];
 
 const menuCategories = [
@@ -68,26 +49,26 @@ const menuCategories = [
 
 const menuItemsData: Record<string, Array<{ num: string; name: string; price: string; desc: string; image?: string }>> = {
   food: [
-    { num: '01', name: 'Chimichurri Fish Tikka', price: '', desc: 'Tender river sole marinated in aromatic zesty chimichurri herbs, flame-grilled in the tandoor', image: '/foodmenu/CHIMICHURI%20FISH%20TIKKA.jpg' },
-    { num: '02', name: 'Muhammara with Pita', price: '', desc: 'Rich roasted red pepper & walnut dip infused with pomegranate molasses, served with warm handmade pita', image: '/foodmenu/Muhamara%20with%20pita.jpg' },
-    { num: '03', name: 'Chicken Bao', price: '', desc: 'Fluffy steamed artisan bao buns filled with glazed spiced chicken, scallions & crunchy house slaw', image: '/foodmenu/Chicken%20Bao.jpg' },
-    { num: '04', name: 'Chicken Loaded Nachos', price: '', desc: 'Crisp tortilla chips topped with shredded spiced chicken, molten artisanal cheese, jalapeños & salsa', image: '/foodmenu/CHICKEN%20LOADED%20NACHOS.jpg' },
-    { num: '05', name: 'Lamachun Flatbread', price: '', desc: 'Crispy Turkish-style thin flatbread baked with seasoned minced meat, sumac onions, fresh herbs & lemon', image: '/foodmenu/LAMACHUN.jpg' },
-    { num: '06', name: 'Spaghetti Prawns Aglio E Olio', price: '', desc: 'Classic spaghetti tossed with sautéed tiger prawns, golden garlic slices, extra virgin olive oil & chilli', image: '/foodmenu/SPAGHETTI%20PRAWNS%20AGLIO%20E%20OLIO.jpg' },
-    { num: '07', name: 'Caramelized Popcorn Bhel', price: '', desc: 'Sweet and savory gourmet popcorn tossed with spiced crisps, tangy tamarind drizzle & roasted peanuts', image: '/foodmenu/CARAMELIZED%20POPCORN%20BHEL.jpg' },
+    { num: '01', name: 'Chimichurri Fish Tikka', price: '', desc: 'Tender river sole marinated in aromatic zesty chimichurri herbs, flame-grilled in the tandoor', image: '/foodmenu/CHIMICHURI%20FISH%20TIKKA.webp' },
+    { num: '02', name: 'Muhammara with Pita', price: '', desc: 'Rich roasted red pepper & walnut dip infused with pomegranate molasses, served with warm handmade pita', image: '/foodmenu/Muhamara%20with%20pita.webp' },
+    { num: '03', name: 'Chicken Bao', price: '', desc: 'Fluffy steamed artisan bao buns filled with glazed spiced chicken, scallions & crunchy house slaw', image: '/foodmenu/Chicken%20Bao.webp' },
+    { num: '04', name: 'Chicken Loaded Nachos', price: '', desc: 'Crisp tortilla chips topped with shredded spiced chicken, molten artisanal cheese, jalapeños & salsa', image: '/foodmenu/CHICKEN%20LOADED%20NACHOS.webp' },
+    { num: '05', name: 'Lamachun Flatbread', price: '', desc: 'Crispy Turkish-style thin flatbread baked with seasoned minced meat, sumac onions, fresh herbs & lemon', image: '/foodmenu/LAMACHUN.webp' },
+    { num: '06', name: 'Spaghetti Prawns Aglio E Olio', price: '', desc: 'Classic spaghetti tossed with sautéed tiger prawns, golden garlic slices, extra virgin olive oil & chilli', image: '/foodmenu/SPAGHETTI%20PRAWNS%20AGLIO%20E%20OLIO.webp' },
+    { num: '07', name: 'Caramelized Popcorn Bhel', price: '', desc: 'Sweet and savory gourmet popcorn tossed with spiced crisps, tangy tamarind drizzle & roasted peanuts', image: '/foodmenu/CARAMELIZED%20POPCORN%20BHEL.webp' },
   ],
   beer: [
-    { num: '01', name: 'Czech Dark Lager', price: '', desc: 'Rich Bohemian roasted malts with hints of caramel, dark chocolate & a crisp, balanced finish', image: '/beer/CZECH%20DARK%20LAGER.jpg' },
-    { num: '02', name: 'Kokan Rice Lager', price: '', desc: 'Crisp, refreshing craft lager brewed with regional Konkan rice & a clean dry finish', image: '/beer/KOKAN%20RICE%20LAGER.jpg' },
-    { num: '03', name: 'Wit and Wisdom', price: '', desc: 'Classic Belgian-style wheat witbier infused with toasted coriander seeds & fresh orange peel', image: '/beer/WIT%20AND%20WISDOM.jpg' },
-    { num: '04', name: 'Guava Mead', price: '', desc: 'Artisanal fermented honey mead blended with luscious tropical pink guavas & subtle floral sweetness', image: '/beer/GUAVA%20MEAD.jpg' },
-    { num: '05', name: 'Double Berry Mead', price: '', desc: 'Sparkling fermented craft mead infused with wild mountain blueberries, blackberries & delicate tart sweetness', image: '/beer/DOUBLE%20BERRY%20MEAD.jpg' },
-    { num: '06', name: 'Happy With Sin', price: '', desc: 'Bold signature craft brew bursting with vibrant fruity notes, silky haze & a rich malty body', image: '/beer/HAPPY%20WITH%20SIN.jpg' },
+    { num: '01', name: 'Czech Dark Lager', price: '', desc: 'Rich Bohemian roasted malts with hints of caramel, dark chocolate & a crisp, balanced finish', image: '/beer/CZECH%20DARK%20LAGER.webp' },
+    { num: '02', name: 'Kokan Rice Lager', price: '', desc: 'Crisp, refreshing craft lager brewed with regional Konkan rice & a clean dry finish', image: '/beer/KOKAN%20RICE%20LAGER.webp' },
+    { num: '03', name: 'Wit and Wisdom', price: '', desc: 'Classic Belgian-style wheat witbier infused with toasted coriander seeds & fresh orange peel', image: '/beer/WIT%20AND%20WISDOM.webp' },
+    { num: '04', name: 'Guava Mead', price: '', desc: 'Artisanal fermented honey mead blended with luscious tropical pink guavas & subtle floral sweetness', image: '/beer/GUAVA%20MEAD.webp' },
+    { num: '05', name: 'Double Berry Mead', price: '', desc: 'Sparkling fermented craft mead infused with wild mountain blueberries, blackberries & delicate tart sweetness', image: '/beer/DOUBLE%20BERRY%20MEAD.webp' },
+    { num: '06', name: 'Happy With Sin', price: '', desc: 'Bold signature craft brew bursting with vibrant fruity notes, silky haze & a rich malty body', image: '/beer/HAPPY%20WITH%20SIN.webp' },
   ],
   cocktails: [
-    { num: '01', name: 'Breaky Breaky', price: '', desc: 'Inventive breakfast-inspired signature cocktail with toasted brioche notes, cold brew essence & citrus aromatics', image: '/cocktailimg/BREAKY%20BREAKY.jpg' },
-    { num: '02', name: 'Purple Tickle', price: '', desc: 'Vibrant butterfly pea flower infused botanical gin, elderflower cordial, lavender mist & tonic', image: '/cocktailimg/PURPLE%20TICKLE.jpg' },
-    { num: '03', name: 'Truffle Tussle', price: '', desc: 'Sophisticated savory libation featuring white truffle oil washed spirit, herbal vermouth & citrus twist', image: '/cocktailimg/TRUFFLE%20TUSSLE.jpg' },
+    { num: '01', name: 'Breaky Breaky', price: '', desc: 'Inventive breakfast-inspired signature cocktail with toasted brioche notes, cold brew essence & citrus aromatics', image: '/cocktailimg/BREAKY%20BREAKY.webp' },
+    { num: '02', name: 'Purple Tickle', price: '', desc: 'Vibrant butterfly pea flower infused botanical gin, elderflower cordial, lavender mist & tonic', image: '/cocktailimg/PURPLE%20TICKLE.webp' },
+    { num: '03', name: 'Truffle Tussle', price: '', desc: 'Sophisticated savory libation featuring white truffle oil washed spirit, herbal vermouth & citrus twist', image: '/cocktailimg/TRUFFLE%20TUSSLE.webp' },
   ],
 };
 
@@ -112,15 +93,15 @@ export default function Home() {
           HERO
       ========================================================= */}
       <section id="home" className="hero relative h-[100dvh] min-h-[600px] flex items-center overflow-hidden bg-[#1E1815] text-white">
-        <div
-          className="hero-image absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: 'url("/DSC06513.jpg")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        >
-          <img src="/DSC06513.jpg" alt="Ouza Cocktail Bar & Kitchen" className="w-full h-full object-cover" />
+        <div className="hero-image absolute inset-0 w-full h-full bg-[#1E1815]">
+          <img
+            src="/DSC06513.webp"
+            alt="Ouza Cocktail Bar & Kitchen"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            className="w-full h-full object-cover"
+          />
         </div>
 
         {/* Hero Gradient Overlay */}
@@ -235,15 +216,17 @@ export default function Home() {
         <div className="container max-w-8xl 2xl:max-w-8xl w-[94%] mx-auto about-grid grid grid-cols-1 lg:grid-cols-2 gap-[60px] lg:gap-[100px] items-center">
           <div className="about-images relative pr-0 lg:pr-[60px]">
             <img
-              src="/DSC07884.jpg"
+              src="/DSC07884.webp"
               alt="Ouza dining"
               loading="lazy"
+              decoding="async"
               className="about-main w-full lg:w-[90%] h-[420px] lg:h-[530px] object-cover object-center lg:ml-2"
             />
             <img
-              src="/smallimage.jpg"
+              src="/smallimage.webp"
               alt="Ouza food"
               loading="lazy"
+              decoding="async"
               className="about-small absolute right-0 bottom-0 w-[135px] lg:w-[190px] h-[155px] lg:h-[210px] object-cover border-[6px] lg:border-[9px] border-[#F8F6EE]"
             />
             <div className="absolute right-1 lg:right-[15px] top-2 lg:top-[15px] w-[130px] lg:w-[150px] h-[130px] lg:h-[150px] flex items-center justify-center z-[4] pointer-events-auto">
@@ -332,9 +315,10 @@ export default function Home() {
           <div className="experience-grid !grid grid-cols-1 md:!grid-cols-3 gap-4 lg:gap-5">
             <article className="experience-card relative h-[480px] max-lg:h-[400px] overflow-hidden group">
               <img
-                src="/DSC06052.JPG"
+                src="/DSC06052.webp"
                 alt="Bar Menu"
                 loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
@@ -357,9 +341,10 @@ export default function Home() {
 
             <article className="experience-card relative h-[480px] max-lg:h-[400px] overflow-hidden group">
               <img
-                src="/theouzaexp/food.jpg"
+                src="/theouzaexp/food.webp"
                 alt="Food Menu"
                 loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
@@ -382,9 +367,10 @@ export default function Home() {
 
             <article className="experience-card relative h-[480px] max-lg:h-[400px] overflow-hidden group">
               <img
-                src="/theouzaexp/cocktail.jpg"
+                src="/theouzaexp/cocktail.webp"
                 alt="Cocktail Book"
                 loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
@@ -483,6 +469,7 @@ export default function Home() {
                       src={currentImg}
                       alt={item.name}
                       loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     />
                     <span className="food-number absolute left-3 top-3 px-2.5 py-1 rounded-full bg-white/95 text-[#B36840] text-[11px] font-bold shadow-sm">
@@ -664,6 +651,7 @@ export default function Home() {
                   src={imgSrc}
                   alt={`Ouza moment ${(index % galleryImages.length) + 1}`}
                   loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
