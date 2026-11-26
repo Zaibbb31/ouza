@@ -132,20 +132,20 @@ export default function Navbar({
       >
         <div className="max-w-[1240px] w-[92%] h-[80px] lg:h-[88px] mx-auto flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="w-[130px] sm:w-[150px] h-auto block shrink-0">
+          <a href="#home" className="w-[105px] sm:w-[120px] lg:w-[125px] h-auto block shrink-0">
             <img
-              src={scrolled ? '/logo-dark.png' : '/logo-light.png'}
+              src={scrolled ? '/logocolour.svg' : '/logo-white.svg'}
               alt="Ouza Cocktail Bar & Kitchen"
-              className="block w-full h-auto max-h-[64px] object-contain"
+              className="block w-full h-auto max-h-[42px] sm:max-h-[46px] object-contain transition-all duration-300"
               onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
                 const target = e.currentTarget;
                 target.style.display = 'none';
                 if (target.nextElementSibling) (target.nextElementSibling as HTMLElement).style.display = 'block';
               }}
             />
-            <span style={{ display: 'none' }} className="font-serif italic text-[24px] leading-[0.8] text-[#B36840]">
+            <span style={{ display: 'none' }} className="font-serif italic text-[20px] leading-[0.8] text-[#B36840]">
               ouza
-              <small className="block font-sans not-italic text-[8px] tracking-[2px] mt-1 text-[#1E1815]">COCKTAIL BAR &bull; KITCHEN</small>
+              <small className="block font-sans not-italic text-[7px] tracking-[2px] mt-1 text-[#1E1815]">COCKTAIL BAR &bull; KITCHEN</small>
             </span>
           </a>
 
@@ -326,11 +326,11 @@ export default function Navbar({
         >
           {/* Top Bar inside Drawer */}
           <div className="h-[74px] px-6 flex items-center justify-between border-b border-white/10 shrink-0 bg-[#2B231F]">
-            <a href="#home" onClick={handleClose} className="w-[110px] sm:w-[125px] block">
+            <a href="#home" onClick={handleClose} className="w-[95px] sm:w-[105px] block">
               <img
-                src="/logo-light.png"
+                src="/logo-white.svg"
                 alt="Ouza Cocktail Bar & Kitchen"
-                className="w-full h-auto max-h-[56px] object-contain"
+                className="w-full h-auto max-h-[38px] sm:max-h-[42px] object-contain"
                 onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
                   const target = e.currentTarget;
                   target.style.display = 'none';

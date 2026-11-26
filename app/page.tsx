@@ -95,14 +95,6 @@ const menuItemsData: Record<string, Array<{ num: string; name: string; price: st
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<'food' | 'bar' | 'cocktails'>('food');
-  const [imageStep, setImageStep] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setImageStep((prev) => (prev + 1) % 100);
-    }, 3500);
-    return () => clearInterval(timer);
-  }, []);
 
   const currentCategory = menuCategories.find((c) => c.id === activeTab) || menuCategories[0];
   const activeItems = menuItemsData[activeTab] || menuItemsData.food;
@@ -341,7 +333,7 @@ export default function Home() {
           <div className="experience-grid !grid grid-cols-1 md:!grid-cols-3 gap-4 lg:gap-5">
             <article className="experience-card relative h-[480px] max-lg:h-[400px] overflow-hidden group">
               <img
-                src="/theouzaexp/bar.jpg"
+                src="/DSC07873.jpg"
                 alt="Bar Menu"
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -455,10 +447,7 @@ export default function Home() {
                     className={`px-6 py-2.5 rounded-full text-[13px] sm:text-[14px] font-medium transition-all cursor-pointer whitespace-nowrap shrink-0 border ${
                       isActive ? 'shadow-sm font-semibold' : 'hover:border-[#B36840] hover:text-[#B36840]'
                     }`}
-                    onClick={() => {
-                      setActiveTab(cat.id);
-                      setImageStep(0);
-                    }}
+                    onClick={() => setActiveTab(cat.id)}
                   >
                     {cat.label}
                   </button>
@@ -484,12 +473,7 @@ export default function Home() {
           {/* Grid with cards: 3 cards per row on desktop */}
           <div className="food-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {activeItems.map((item, index) => {
-              const currentImg =
-                activeTab === 'food'
-                  ? foodImages[index % foodImages.length]
-                  : activeTab === 'cocktails'
-                  ? cocktailImages[index % cocktailImages.length]
-                  : categoryImages[(index + imageStep) % categoryImages.length];
+              const currentImg = categoryImages[index % categoryImages.length];
               return (
                 <article
                   key={`${activeTab}-${item.num}-${index}`}
@@ -497,7 +481,6 @@ export default function Home() {
                 >
                   <div className="food-image relative h-[250px] sm:h-[270px] overflow-hidden rounded-lg bg-[#F8F6EE]">
                     <img
-                      key={currentImg}
                       src={currentImg}
                       alt={item.name}
                       loading="lazy"
@@ -789,7 +772,7 @@ export default function Home() {
                 className="inline-block"
               >
                 <img
-                  src="/logo-dark.png"
+                  src="/logocolour.svg"
                   alt="Ouza Cocktail Bar & Kitchen"
                   className="w-[140px] max-sm:w-[120px] h-auto block object-contain"
                 />
