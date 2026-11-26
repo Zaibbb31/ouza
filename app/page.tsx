@@ -235,7 +235,7 @@ export default function Home() {
         <div className="container max-w-8xl 2xl:max-w-8xl w-[94%] mx-auto about-grid grid grid-cols-1 lg:grid-cols-2 gap-[60px] lg:gap-[100px] items-center">
           <div className="about-images relative pr-0 lg:pr-[60px]">
             <img
-              src="/bigimage.jpg"
+              src="/DSC07884.jpg"
               alt="Ouza dining"
               loading="lazy"
               className="about-main w-full lg:w-[90%] h-[420px] lg:h-[530px] object-cover object-center lg:ml-2"
