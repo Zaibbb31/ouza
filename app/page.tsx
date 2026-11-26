@@ -26,6 +26,15 @@ const foodImages = [
   "/foodmenu/CARAMELIZED%20POPCORN%20BHEL.jpg",
 ];
 
+const beerImages = [
+  "/beer/CZECH%20DARK%20LAGER.jpg",
+  "/beer/KOKAN%20RICE%20LAGER.jpg",
+  "/beer/WIT%20AND%20WISDOM.jpg",
+  "/beer/GUAVA%20MEAD.jpg",
+  "/beer/DOUBLE%20BERRY%20MEAD.jpg",
+  "/beer/HAPPY%20WITH%20SIN.jpg",
+];
+
 const drinksImages = [
   "/photos/DSC00103.JPG",
   "/photos/DSC00088.JPG",
@@ -46,16 +55,15 @@ const partyImages = [
 ];
 
 const cocktailImages = [
-  "/cocktail/0I4A0960.jpg",
-  "/cocktail/0I4A1048.jpg",
-  "/cocktail/DSC00685.jpg",
-  "/cocktail/DSC03044.jpg",
+  "/cocktailimg/BREAKY%20BREAKY.jpg",
+  "/cocktailimg/PURPLE%20TICKLE.jpg",
+  "/cocktailimg/TRUFFLE%20TUSSLE.jpg",
 ];
 
 const menuCategories = [
-  { id: 'food' as const, label: 'Food Menu', pdf: '/menu%20copy/food%20menu.pdf' },
-  { id: 'bar' as const, label: 'Bar Menu', pdf: '/menu%20copy/OUZA%20-%20bar%20menu.pdf' },
-  { id: 'cocktails' as const, label: 'Cocktail Book', pdf: '/menu%20copy/Ouza%20Cocktail%20Book.pdf' },
+  { id: 'food' as const, label: 'Food', pdfLabel: 'Food Menu', pdf: '/menu%20copy/food%20menu.pdf' },
+  { id: 'beer' as const, label: 'Beer', pdfLabel: 'Beer Menu', pdf: '/menu%20copy/OUZA%20-%20bar%20menu.pdf' },
+  { id: 'cocktails' as const, label: 'Cocktail', pdfLabel: 'Cocktail Book', pdf: '/menu%20copy/Ouza%20Cocktail%20Book.pdf' },
 ];
 
 const menuItemsData: Record<string, Array<{ num: string; name: string; price: string; desc: string; image?: string }>> = {
@@ -68,33 +76,29 @@ const menuItemsData: Record<string, Array<{ num: string; name: string; price: st
     { num: '06', name: 'Spaghetti Prawns Aglio E Olio', price: '', desc: 'Classic spaghetti tossed with sautéed tiger prawns, golden garlic slices, extra virgin olive oil & chilli', image: '/foodmenu/SPAGHETTI%20PRAWNS%20AGLIO%20E%20OLIO.jpg' },
     { num: '07', name: 'Caramelized Popcorn Bhel', price: '', desc: 'Sweet and savory gourmet popcorn tossed with spiced crisps, tangy tamarind drizzle & roasted peanuts', image: '/foodmenu/CARAMELIZED%20POPCORN%20BHEL.jpg' },
   ],
-  bar: [
-    { num: '01', name: 'House Guava Craft Beer', price: '₹450', desc: 'Craft wheat beer infused with ripe tropical guava, a pinch of chilli salt & crisp wheat finish' },
-    { num: '02', name: 'Blueberry Artisanal Ale', price: '₹475', desc: 'Refreshing berry craft ale brewed with mountain blueberries & subtle citrus undertones' },
-    { num: '03', name: 'Belgian Style Witbier', price: '₹450', desc: 'Classic cloudy wheat brew with toasted coriander seeds & dried orange peel' },
-    { num: '04', name: 'Curated International Vintage Wine', price: '₹1,200', desc: 'Handpicked international and Indian estate vintage pours available by the glass' },
-    { num: '05', name: 'Sparkling Italian Prosecco', price: '₹950', desc: 'Crisp, light, effervescent bubbles with green apple and white peach aromas' },
-    { num: '06', name: 'Aged Single Malt & Scotch', price: '₹850', desc: 'Curated library of Highland and Islay single malts, aged bourbons & premium blended scotches' },
-    { num: '07', name: 'Artisanal Botanical Gin', price: '₹750', desc: 'Small-batch craft gins paired with artisanal tonics, dehydrated botanicals & herbs' },
-    { num: '08', name: 'Premium Aged Dark & Spiced Rum', price: '₹650', desc: 'Oak-barrel aged spiced rums, rich molasses notes & smooth lingering finish' },
-    { num: '09', name: 'Ouza Sangria Pitcher / Glass', price: '₹650', desc: 'Red or white wine infused with seasonal orchard fruits, brandy & fresh citrus' },
+  beer: [
+    { num: '01', name: 'Czech Dark Lager', price: '', desc: 'Rich Bohemian roasted malts with hints of caramel, dark chocolate & a crisp, balanced finish', image: '/beer/CZECH%20DARK%20LAGER.jpg' },
+    { num: '02', name: 'Kokan Rice Lager', price: '', desc: 'Crisp, refreshing craft lager brewed with regional Konkan rice & a clean dry finish', image: '/beer/KOKAN%20RICE%20LAGER.jpg' },
+    { num: '03', name: 'Wit and Wisdom', price: '', desc: 'Classic Belgian-style wheat witbier infused with toasted coriander seeds & fresh orange peel', image: '/beer/WIT%20AND%20WISDOM.jpg' },
+    { num: '04', name: 'Guava Mead', price: '', desc: 'Artisanal fermented honey mead blended with luscious tropical pink guavas & subtle floral sweetness', image: '/beer/GUAVA%20MEAD.jpg' },
+    { num: '05', name: 'Double Berry Mead', price: '', desc: 'Sparkling fermented craft mead infused with wild mountain blueberries, blackberries & delicate tart sweetness', image: '/beer/DOUBLE%20BERRY%20MEAD.jpg' },
+    { num: '06', name: 'Happy With Sin', price: '', desc: 'Bold signature craft brew bursting with vibrant fruity notes, silky haze & a rich malty body', image: '/beer/HAPPY%20WITH%20SIN.jpg' },
   ],
   cocktails: [
-    { num: '01', name: 'Ouza Botanical Spritz', price: '', desc: 'Garden botanicals, elderflower cordial, sparkling prosecco & chilled citrus tonic' },
-    { num: '02', name: 'Clarified Citrus Milk Punch', price: '', desc: 'Spiced rum, grilled pineapple, aromatic bitters & silky clarified whey' },
-    { num: '03', name: 'Kokum & Smoked Mezcalita', price: '', desc: 'Artisanal mezcal, fresh Konkan kokum nectar, lime & smoked pink salt rim' },
-    { num: '04', name: 'Ouza Smoked Old Fashioned', price: '', desc: 'Bourbon whiskey, barrel-aged bitters, charred orange peel & applewood smoke' },
+    { num: '01', name: 'Breaky Breaky', price: '', desc: 'Inventive breakfast-inspired signature cocktail with toasted brioche notes, cold brew essence & citrus aromatics', image: '/cocktailimg/BREAKY%20BREAKY.jpg' },
+    { num: '02', name: 'Purple Tickle', price: '', desc: 'Vibrant butterfly pea flower infused botanical gin, elderflower cordial, lavender mist & tonic', image: '/cocktailimg/PURPLE%20TICKLE.jpg' },
+    { num: '03', name: 'Truffle Tussle', price: '', desc: 'Sophisticated savory libation featuring white truffle oil washed spirit, herbal vermouth & citrus twist', image: '/cocktailimg/TRUFFLE%20TUSSLE.jpg' },
   ],
 };
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState<'food' | 'bar' | 'cocktails'>('food');
+  const [activeTab, setActiveTab] = useState<'food' | 'beer' | 'cocktails'>('food');
 
   const currentCategory = menuCategories.find((c) => c.id === activeTab) || menuCategories[0];
   const activeItems = menuItemsData[activeTab] || menuItemsData.food;
   const categoryImages =
-    activeTab === 'bar' ? drinksImages : activeTab === 'cocktails' ? cocktailImages : foodImages;
+    activeTab === 'beer' ? beerImages : activeTab === 'cocktails' ? cocktailImages : foodImages;
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -459,7 +463,7 @@ export default function Home() {
                 style={{ backgroundColor: '#B36840', color: '#ffffff' }}
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[13px] font-semibold transition-all hover:bg-[#96522E] hover:scale-105 shadow-sm"
               >
-                <span>View {currentCategory.label} (PDF)</span>
+                <span>View {currentCategory.pdfLabel ? `${currentCategory.pdfLabel} (PDF)` : `${currentCategory.label} (PDF)`}</span>
                 <span>↗</span>
               </a>
             </div>
@@ -515,7 +519,7 @@ export default function Home() {
               style={{ color: '#B36840', borderColor: '#B36840' }}
               className="underline-link inline-block text-[14px] font-semibold border-b pb-1 hover:opacity-80 transition-opacity"
             >
-              View the full {currentCategory.label} (PDF) →
+              View the full {currentCategory.pdfLabel ? `${currentCategory.pdfLabel} (PDF)` : `${currentCategory.label} (PDF)`} →
             </a>
           </div>
         </div>
