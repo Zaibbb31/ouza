@@ -42,9 +42,9 @@ const cocktailImages = [
 ];
 
 const menuCategories = [
-  { id: 'food' as const, label: 'Food', pdfLabel: 'Food Menu', pdf: '/menu%20copy/food%20menu.pdf' },
-  { id: 'beer' as const, label: 'Beer', pdfLabel: 'Beer Menu', pdf: '/menu%20copy/OUZA%20-%20bar%20menu.pdf' },
-  { id: 'cocktails' as const, label: 'Cocktail', pdfLabel: 'Cocktail Book', pdf: '/menu%20copy/Ouza%20Cocktail%20Book.pdf' },
+  { id: 'food' as const, label: 'FOOD', pdfLabel: 'Food Menu', pdf: '/menu%20copy/food%20menu.pdf' },
+  { id: 'beer' as const, label: 'BEERS ON TAP', pdfLabel: 'Beer Menu', pdf: '/menu%20copy/OUZA%20-%20bar%20menu.pdf' },
+  { id: 'cocktails' as const, label: 'COCKTAIL', pdfLabel: 'Cocktail Book', pdf: '/menu%20copy/Ouza%20Cocktail%20Book.pdf' },
 ];
 
 const menuItemsData: Record<string, Array<{ num: string; name: string; price: string; desc: string; image?: string }>> = {
@@ -62,7 +62,7 @@ const menuItemsData: Record<string, Array<{ num: string; name: string; price: st
     { num: '02', name: 'Kokan Rice Lager', price: '', desc: 'Crisp, refreshing craft lager brewed with regional Konkan rice & a clean dry finish', image: '/beer/KOKAN%20RICE%20LAGER.webp' },
     { num: '03', name: 'Wit and Wisdom', price: '', desc: 'Classic Belgian-style wheat witbier infused with toasted coriander seeds & fresh orange peel', image: '/beer/WIT%20AND%20WISDOM.webp' },
     { num: '04', name: 'Guava Mead', price: '', desc: 'Artisanal fermented honey mead blended with luscious tropical pink guavas & subtle floral sweetness', image: '/beer/GUAVA%20MEAD.webp' },
-    { num: '05', name: 'Double Berry Mead', price: '', desc: 'Sparkling fermented craft mead infused with wild mountain blueberries, blackberries & delicate tart sweetness', image: '/beer/DOUBLE%20BERRY%20MEAD.webp' },
+    { num: '05', name: 'Blueberry Mead', price: '', desc: 'Sparkling fermented craft mead infused with wild mountain blueberries, blackberries & delicate tart sweetness', image: '/beer/DOUBLE%20BERRY%20MEAD.webp' },
     { num: '06', name: 'Happy With Sin', price: '', desc: 'Bold signature craft brew bursting with vibrant fruity notes, silky haze & a rich malty body', image: '/beer/HAPPY%20WITH%20SIN.webp' },
   ],
   cocktails: [
